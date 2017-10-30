@@ -13,3 +13,15 @@ size_mr_data <- data.frame(
     106.670, 119.660, 104.150, 33.165, 4.900, 4.865))
     
 #code goes here
+ggplot(size_mr_data, aes(x = body_mass, y = metabolic_rate)) +
+  geom_point(size = 3, color = "black") +
+  labs(x = "Body Mass (g)", y = ("Metabolic Rate"))
+
+ggplot(size_mr_data, aes(x = log10(body_mass), y = log10(metabolic_rate))) + 
+  geom_point(size =2, color =  "blue") +
+  labs( x = "Log Body Mass", y = "Log Metabolic Rate")
+
+ggplot(size_mr_data, aes(x = body_mass, y = metabolic_rate)) +
+  geom_point() +
+  labs(x = "Body Mass (g)", y = ("Metabolic Rate")) + scale_y_log10() + scale_x_log10()
+
