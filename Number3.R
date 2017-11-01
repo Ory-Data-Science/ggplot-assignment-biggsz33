@@ -13,3 +13,7 @@ ggplot(dat, aes(x = mass.g., y = newborn.g.)) +
 ggplot(dat, aes(x = log10(mass.g.), y = log10(newborn.g.))) + 
   geom_point(size =2, color =  "blue") +
   labs( x = "Log Adult Mass", y = "Log Newborn Mass")
+
+ggplot(dat, aes(x = mass.g., y = newborn.g., color = order)) +
+  geom_point() +
+  labs(x = "Body Mass (g)", y = ("Metabolic Rate")) + scale_y_log10() + scale_x_log10()
