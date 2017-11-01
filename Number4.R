@@ -11,17 +11,20 @@ ggplot(data = dat, aes(x= F_mass)) +
   geom_histogram()
 
 ggplot(data = dat, aes(x= log10(F_mass))) + 
-  labs(x = "Female Mass (g)") +
+  labs(x = "Log Female Mass (g)") +
   geom_histogram(fill = "blue")
 
 ggplot(data = dat, aes(x= log10(F_mass))) + 
-  labs(x = "Female Mass (g)") +
+  labs(x = "Female vs Male Log Mass") +
   geom_histogram(fill = "blue") +
   geom_histogram(aes(x = log10(M_mass)), alpha = 0.3)
 
 ggplot(data = dat, aes(x= log10(F_mass))) + 
-  labs(x = "Female Mass (g)") +
+  labs(x = "Female Mass vs Male Mass (log)") +
   geom_histogram(fill = "blue") +
   geom_histogram(aes(x = log10(M_mass)), alpha = 0.3) +
   facet_wrap(~Family)
+
+
+
 
