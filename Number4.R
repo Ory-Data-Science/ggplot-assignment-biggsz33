@@ -10,6 +10,11 @@ ggplot(data = dat, aes(x= F_mass)) +
   labs(x = "Female Mass") +
   geom_histogram()
 
-ggplot(data = dat, aes(x= log10(F_mass)), fill = "blue") + 
+ggplot(data = dat, aes(x= log10(F_mass))) + 
   labs(x = "Female Mass (g)") +
-  geom_histogram()
+  geom_histogram(fill = "blue")
+
+ggplot(data = dat, aes(x= log10(F_mass))) + 
+  labs(x = "Female Mass (g)") +
+  geom_histogram(fill = "blue") +
+  geom_histogram(aes(x = log10(M_mass)), alpha = 0.3)
