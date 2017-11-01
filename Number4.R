@@ -18,3 +18,10 @@ ggplot(data = dat, aes(x= log10(F_mass))) +
   labs(x = "Female Mass (g)") +
   geom_histogram(fill = "blue") +
   geom_histogram(aes(x = log10(M_mass)), alpha = 0.3)
+
+ggplot(data = dat, aes(x= log10(F_mass))) + 
+  labs(x = "Female Mass (g)") +
+  geom_histogram(fill = "blue") +
+  geom_histogram(aes(x = log10(M_mass)), alpha = 0.3) +
+  facet_wrap(~order)
+
