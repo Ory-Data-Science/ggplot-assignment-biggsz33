@@ -17,3 +17,8 @@ ggplot(dat, aes(x = log10(mass.g.), y = log10(newborn.g.))) +
 ggplot(dat, aes(x = mass.g., y = newborn.g., color = order)) +
   geom_point() +
   labs(x = "Body Mass (g)", y = ("Metabolic Rate")) + scale_y_log10() + scale_x_log10()
+
+ggplot(dat, aes(x = mass.g., y = newborn.g., color = order)) +
+  geom_point() +
+  labs(x = "Body Mass (g)", y = ("Metabolic Rate")) + scale_y_log10() + scale_x_log10() +
+  facet_wrap(~ order)
