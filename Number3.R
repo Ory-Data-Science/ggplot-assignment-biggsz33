@@ -22,3 +22,9 @@ ggplot(dat, aes(x = mass.g., y = newborn.g., color = order)) +
   geom_point() +
   labs(x = "Body Mass (g)", y = ("Metabolic Rate")) + scale_y_log10() + scale_x_log10() +
   facet_wrap(~ order)
+
+ggplot(dat, aes(x = mass.g., y = newborn.g., color = order)) +
+  geom_point() +
+  labs(x = "Body Mass (g)", y = ("Metabolic Rate")) + scale_y_log10() + scale_x_log10() +
+  facet_wrap(~ order) +
+  geom_smooth(method = "lm")
